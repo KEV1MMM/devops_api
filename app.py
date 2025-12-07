@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def root():
-    return jsonify({"message": "Hola desde mi API en la nube (v1)"}), 200
+    return jsonify({"message": "Hola desde CI/CD con GHCR (v2)"})
 
 
 @app.route("/status", methods=["GET"])
