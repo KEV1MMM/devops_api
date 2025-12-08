@@ -13,10 +13,10 @@ jobs:
 
     - name: Login to GHCR
       run: |
-        echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "${{ github.actor }}" --password-stdin
+        echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u "kev1mmm" --password-stdin
 
     - name: Build image
-      run: docker build -t ghcr.io/${{ github.repository }}:latest .
+      run: docker build -t ghcr.io/kev1mmm/devops-api:latest .
 
     - name: Push image
-      run: docker push ghcr.io/${{ github.repository }}:latest
+      run: docker push ghcr.io/kev1mmm/devops-api:latest
